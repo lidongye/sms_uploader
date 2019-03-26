@@ -5,6 +5,7 @@
 
 import os
 import time
+import traceback
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 run_path = os.path.dirname(os.path.split(os.path.realpath(__file__))[0])
@@ -44,8 +45,8 @@ def run(options):
             clock = time.time()
             server.check_sms()
         except Exception as e:
-            _logger.error(e)
-            print(e)
+            _logger.error(traceback.format_exc())
+            traceback.print_exc()
         finally:
             # sleep for the remaining seconds of interval
             if (time.time() - clock) < scan_interval:
