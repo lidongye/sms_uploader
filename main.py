@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding=utf-8 -*-
-# author: Dongye Li<dongye@gooalgene.com>
+# author: dongye<dongye_bio@qq.com>
 # 2019-03-20 1:21
 
 import sys
